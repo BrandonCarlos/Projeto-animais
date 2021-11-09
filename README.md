@@ -21,7 +21,7 @@
 - [x] Animação ao Scroll   
 - [x] Tooltip 
 
-Acessar na WEB -> <a href="https://project-origamid.netlify.app/" target="_blank>Project origamid</a>
+Acessar na WEB -> <a href="https://project-origamid.netlify.app/" target="_blank">Project origamid</a>
 
 <br>
 <br>
