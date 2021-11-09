@@ -1,0 +1,62 @@
+[data-menu="button"] {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .js [data-menu="button"] {
+    display: flex;
+    background: #222;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    margin: 1rem;
+    align-items: center;
+    position: relative;/* position: relative; z-index:300; <- são obrigatórios */
+    z-index: 300;  
+  } 
+
+  /* Curiosidade ::before também é um elemento normal, e podemos usar align-item e 
+  justify-content */
+
+  .js [data-menu="button"]::before {
+    margin-right: .4rem;
+    content: '';
+    display: inline-block; /* Pra ficar no mesmo nivel do MENU */
+    height: .2rem;
+    width: 1.2rem;
+    background: white;
+    box-shadow: 0 .4rem #fff, 0 -.4rem #fff;/* Aqui é o MACETE */
+    transition: transform .3s;
+  }
+
+  .js [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+
+  .js [data-menu="list"] {/* UL */
+    display: none;
+    position: absolute;
+    background: #FB5;
+    width: 16rem;
+    z-index: 200;
+    top: 0;
+    padding: 6rem 0 2rem 0;
+    box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .2);
+    animation: show-right .3s forwards;
+  }
+
+  .js [data-menu="list"].active {
+    display: block;
+  }
+
+  /* Para o DROPDOWN abrir todo sem atrapalhar os outros itens */
+  .js .dropdown-menu {
+    position: static;/* position normal, ao invés do position absolute */
+    border: none;
+  }
+}

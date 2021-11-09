@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animais fantásticos</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    // Estamos utilizando className por que alguns BROWSER não suportam
+    //classList ainda
+    document.documentElement.className += ' js';
+  </script>
+</head>
+
+<body>  
+  <nav class="menu outraclasse" data-menu="suave">
+    <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button><!-- aria-expanded = irá indicar que o MENU não está ESPANDIDO -->
+    <ul data-menu="list" id="menu">
+      <li><a href="#animais">Animais</a></li>
+      <li data-dropdown>
+        <a href="sobre.html">Sobre</a>
+        <ul class="dropdown-menu">
+          <li><a href="empresa.html">A empresa</a></li>
+          <li><a href="equipe.html">Equipe</a></li>
+          <li><a href="socios.html">Sócios</a></li>
+          <li><a href="investidores.html">Investidores</a></li>
+        </ul>
+      </li>
+      <li><a href="#faq">Faq</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="https://www.origamid.com/">Dev ➡️</a></li>
+    </ul>
+  </nav>
+
+  <section class="grid-section animais" data-anime="scroll" id="animais" data-ok="jogos">
+    <h1 class="titulo">Animais fantásticos</h1>
+    <ul class="animais-lista" data-tab="menu">
+      <li>
+        <img src="/assets/img/imagem1.jpg" alt="Aqui está o ALT" id="umIdAi">
+      </li>
+      <!-- este comentário é um NODE -->
+      <li>
+        <img src="/assets/img/imagem2.jpg">
+      </li>
+      <li>
+        <img src="/assets/img/imagem3.jpg" alt="">
+      </li>
+      <li>
+        <img src="/assets/img/imagem4.jpg" alt="">
+      </li>
+      <li>
+        <img src="/assets/img/imagem5.jpg" alt="">
+      </li>
+      <li>
+        <img src="/assets/img/imagem6.jpg" alt="">
+      </li>
+    </ul>
+    <div class="animais-descricao" data-tab="content">
+      <section data-anime="show-right">
+        <h2>Raposa</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libaque cupiditate alias neque consequatur!</p>
+      </section>
+      <section data-anime="show-right">
+        <h2>Esquilo</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+      </section>
+      <section data-anime="show-down">
+        <h2>Urso</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+      </section>
+      <section data-anime="show-down">
+        <h2>Lobo</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+      </section>
+      <section data-anime="show-right">
+        <h2>Macaco</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+      </section>
+      <section data-anime="show-right">
+        <h2>Leão</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati at officia numquam sit, incidunt ipsum?
+          Libero cum obcaecati eveniet eaque consequuntur, cupiditate alias neque consequatur!</p>
+      </section>
+    </div>
+  </section>
+
+  <section class="grid-section faq" data-anime="scroll" id="faq">
+    <h1 class="titulo">Faq</h1>
+    <dl class="faq-lista" data-anime="accordion">
+      <dt>Qual a idade dos animais?</dt>
+      <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis quidem obcaecati nostrum animi voluptate,
+        asperiores reprehenderit exercitationem alias nisi pariatur, deleniti sequi quod qui optio, nobis ab dolor vitae
+        architecto consequatur aperiam sed quaerat amet.</dd>
+      <dt>Eles são fantásticos?</dt>
+      <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, facilis eveniet ratione vel esse debitis
+        quasi iusto consequuntur non numquam!</dd>
+      <dt>Qual a diferença?</dt>
+      <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptas? Vitae impedit eius libero consequatur,
+        sapiente eos illum non omnis.</dd>
+      <dt>Como proteger?</dt>
+      <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet ducimus omnis animi recusandae nostrum
+        perspiciatis quo praesentium, odio enim soluta alias vero error necessitatibus maxime, placeat porro consequatur
+        mollitia. Magnam.</dd>
+    </dl>
+  </section>
+
+  <section class="grid-section contato" data-anime="scroll" id="contato">
+    <h1 class="titulo">Contato</h1>
+    <div class="mapa" data-tooltip aria-label="Endereço próximo ao estacionamento.">
+      <img src="/assets/img/mapa.png" alt="">
+    </div>
+    <ul class="dados">
+      <li>Contato@origamid.com</li>
+      <li>+55 (11)9999-9999</li>
+      <li>Rua do conde, n° 21</li>
+      <li>São paulo, SP</li>
+    </ul>
+  </section>
+
+  <footer class="copy">
+    <p>Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    'use strict'
+    console.log(this);
+    var nome = 'Brandon';
+
+    function criarQuadrado() {
+      console.log(quadrado);
+    }
+
+    const jogo = 'Mario bros';
+  
+  </script>
+
+  <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

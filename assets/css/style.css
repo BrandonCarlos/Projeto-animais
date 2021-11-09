@@ -1,0 +1,341 @@
+@import './tooltip.css';
+@import './dropdown-menu.css';
+@import './menu-mobile.css';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap');
+
+[data-cor^="azul"] { /* ^=  <- começa com azul... */
+  background: green;
+  color: white;
+}
+
+html {
+  font-size: 100%;
+}
+
+html.texto-maior {
+  font-size: 120%;
+}
+
+body, h1, h2, h3, ul, li, p, dd, dt, dl {
+  margin: 0;
+  padding: 0;
+}
+
+img {/* display: block; com max-width: 100% evita que a imagem ESTOURE */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #faf6ed;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+
+.azul {
+  background: blue;
+}
+
+.menu {
+  grid-column: 3 / 5;/* pega desde a 3ª coluna até a 5ª coluna, o que faz 
+  ele ocupar uma LINHA INTEIRA */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;/* os itens podem quebrar caso a tela esteja muito pequena */
+  padding: 10px;
+}
+
+.menu li a {
+  display: block;
+  padding: 20px;
+  margin-right: 10px;
+  color: #222;
+  text-decoration: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: .875rem;
+  letter-spacing: .1rem;
+}
+
+.grid-section {
+  grid-column: 2 / 4; /* ocupe da linha 2 até a linha 4 */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+  grid-gap: 20px;
+  margin-bottom: 4rem;
+}
+
+.titulo {
+  font-family: 'Playfair Display SC', Georgia;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  grid-column: 1 / 4;
+}
+
+.animais h2 {
+  font-family: 'IMB Plex Mono', monospace;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+  color: #e54;
+}
+
+.animais h2::before {
+  content: '';
+  display: inline-block;/* pra ficar na mesma linha */
+  width: 40px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+.animais p {
+  font-family: Helvetica, Arial;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.animais-lista {/* na lista irá aparecer somente 1 animal por vez */
+  height: 370px;
+  overflow-y: scroll;
+  grid-column: 2;
+}
+
+.animais-lista li {
+  cursor: pointer;
+}
+
+.animais-lista::-webkit-scrollbar {
+  width: 18px;
+}
+
+.animais-lista::-webkit-scrollbar-thumb {
+  background: #fb5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.animais-lista::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.animais-descricao {
+  grid-column: 3;
+}
+
+.animais-descricao section {
+  margin-bottom: 3rem;
+}
+
+.faq-lista {
+  grid-column: 2 / 4;
+}
+
+.faq-lista dt {
+  font-family: 'IMB Plex Mono', monospace;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: #e54;
+}
+
+.faq-lista dt::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #fb5;
+}
+
+.faq-lista dd {
+  font-family: Helvetica, Arial;
+  margin-bottom: .5rem;
+  margin-left: 30px;
+}
+
+.mapa {
+  grid-column: 2;
+}
+
+.dados {
+  grid-column: 3;
+}
+
+.dados li {
+  margin-bottom: 1rem;
+  font-family: Helvetica, Arial;
+}
+
+.dados li::before {
+  content: '';
+  width: 20px;
+  height: 10px;
+  display: inline-block;
+  background: #fb5;  
+  margin-right: 10px;
+}
+
+.copy {
+  grid-column: 3 / 5;
+  margin-bottom: 2rem;
+  background: #fb5;
+}
+
+.copy p {
+  padding: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .menu, .grid-section, .copy {
+    grid-column: 1 / 4;
+  }
+
+  .grid-section {
+    grid-template-columns: 100px 1fr;/* Quando temos 2 colunas temos 3 pontos */
+    grid-gap: 10px;
+  }
+
+  .animais-lista {
+    grid-column: 1;
+  }
+
+  .faq-lista, .dados, .mapa {
+    grid-column: 1 / 3;
+  }
+
+  .grid-section h1 {
+    font-size: 3rem;
+  }
+
+  .menu {
+    margin-top: 0px;
+  }
+
+  .copy {
+    margin-bottom: 0px;
+    grid-column: 1 / 5;
+  }
+}
+
+/* Precisamos manter o conteúdo mesmo com o JAVASCRIPT DESABILITADO */
+.js [data-tab="content"] section {
+  display: none;
+}
+
+/* Quando tiver o .ativo na section... */
+/* Abaixo mudamos para [data-tab="content"] */
+[data-tab="content"] section.ativo {
+  display: block !important;
+  /* Forwards = ai fica no último ESTADO "to" */
+  animation: show 700ms forwards ease-in-out;
+}
+
+[data-tab="content"] section.ativo.show-right {
+  /* Forwards = ai fica no último ESTADO "to" */
+  animation: show-right 700ms forwards ease-in-out;
+}
+
+[data-tab="content"] section.ativo.show-down {
+  /* Forwards = ai fica no último ESTADO "to" */
+  animation: show-down 700ms forwards ease-in-out;
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+[data-anime="accordion"] dt.ativo {
+  color: #7159c1;
+  transition: 500ms ease-in-out;
+}
+
+.js [data-anime="accordion"] dd {
+  display: none;
+}
+
+[data-anime="accordion"] dt::after {
+  content: '⬇️';
+  margin-left: .5rem;
+}
+
+[data-anime="accordion"] dt.ativo::after {
+  content: '🔝';
+}
+
+[data-anime="accordion"] dd.ativo {
+  display: block;
+  animation: slideDown 800ms forwards ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    /* transform: translateY(-30px); */
+    max-height: 0;/* Para animar o height devemos usar o MAX-HEIGHT */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateY(0px); */
+    max-height: 6rem;
+  }
+}
+
+.js [data-anime="scroll"] {
+  opacity: 0;/* com opacity: 0; -> o OVERFLOW barrinha CONTINUA... */
+  transform: translate3d(-30px, 0, 0);
+  /* colocamos o transition aqui
+  para animar tanto a entrada quanto a saida do elemento */
+  transition: 300ms ease-in-out;
+}
+
+[data-anime="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0px, 0, 0);
+}
+
+
