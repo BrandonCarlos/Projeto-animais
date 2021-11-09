@@ -2,7 +2,7 @@
   Projeto Origamid
 </h1>
 
-<h4>⚠️ Projeto em construção ⚠️</h4>
+<h4 align="center">⚠️ Projeto em construção ⚠️</h4>
 
 <img align="center" src="./assets/img/projetoOrigamid.gif">
 <br>
@@ -21,7 +21,7 @@
 - [x] Animação ao Scroll   
 - [x] Tooltip 
 
-Acessar na WEB -> <a href="https://project-origamid.netlify.app/">
+Acessar na WEB -> <a href="https://project-origamid.netlify.app/">Project origamid</a>
 
 <br>
 <br>
